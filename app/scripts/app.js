@@ -58,6 +58,17 @@ angular
 						templateUrl: 'views/body.html'
 					}
 				}
+			})
+			.state('new-proposal',{
+				url: '/new_proposal',
+				views: {
+					'header' : {
+						templateUrl: 'views/commons/header.html'
+					},
+					'bodyView': {
+						templateUrl: 'views/new-proposal.html'
+					}
+				}
 			});
 
 	}]);
