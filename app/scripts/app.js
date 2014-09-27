@@ -51,6 +51,9 @@ angular
 			.state('home',{
 				url: '/home',
 				views: {
+					'header' : {
+						templateUrl: 'views/commons/header.html'
+					},
 					'bodyView': {
 						templateUrl: 'views/body.html'
 					}
