@@ -10,8 +10,8 @@
  */
 angular
 	.module('foodtruckieApp', [
-		'ui.router',
 		'LocalStorageModule',
+		'ui.router',
 		'ngAnimate',
 		'ngCookies',
 		'ngSanitize',
