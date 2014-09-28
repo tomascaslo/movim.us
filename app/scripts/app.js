@@ -56,7 +56,8 @@ angular
 				url: '/login',
 				views: {
 					'generalView' : {
-						templateUrl: 'views/sign-in.html'
+						templateUrl: 'views/sign-in.html',
+						controller: 'LoginCtrl'
 					},
 				}
 			})

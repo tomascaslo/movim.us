@@ -1,9 +1,9 @@
-form.form(onsubmit='return login()')
+form.form
 	h2.form-heading Iniciar sesi&oacute;n en Movimus
 	.form-fields
-		input#username.form-control(type='text', placeholder='Email', required='', autofocus='')
-		input#password.form-control(type='password', placeholder='Password', required='')
-	button.btn.btn-lg.btn-primary.btn-block(type='submit') Iniciar sesi&oacute;n
+		input#username.form-control(type='text', placeholder='Email', required='', autofocus='', ng-model='userData.username')
+		input#password.form-control(type='password', placeholder='Password', required='', ng-model='userData.password')
+	button.btn.btn-lg.btn-primary.btn-block(ng-click="login()") Iniciar sesi&oacute;n
 
 
 	p.text-center(style='margin-top:10px;')

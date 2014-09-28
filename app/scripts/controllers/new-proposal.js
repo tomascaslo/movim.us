@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('movimusApp')
-	.controller('NewProposalCtrl', ['$scope', 'tasksService', function($scope, tasksService){
+	.controller('NewProposalCtrl', ['$scope', '$state', 'tasksService', 
+		function($scope, $state, tasksService){
 		$scope.map = {
 			center: {
 				latitude: 45,
@@ -24,6 +25,8 @@ angular.module('movimusApp')
 			tasksService.addNewProposal($scope.proposalData).then(function(result){
 				console.log(result);
 				alert("Propuesta agregada!");
+				$state.go('h.home');
+
 			}, function(){
 				alert("No se pudo agregar la propuesta.");
 			});

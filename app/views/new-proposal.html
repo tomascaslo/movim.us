@@ -4,17 +4,17 @@
     <div>
       <h3>Nueva Propuesta</h3>
       <div class="input-group">
-        <input type="text" placeholder="Titulo" class="form-control"/>
+        <input type="text" placeholder="Titulo" ng-model="proposalData.name" class="form-control"/>
       </div><br/>
       <div class="input-group">
-        <textarea type="form-control" rows="3" placeholder="Descripción" position="relative"></textarea>
+        <textarea type="form-control" rows="3" placeholder="Descripción" ng-model="proposalData.description"></textarea>
       </div><br/>
       <div class="input-group"><span class="input-group-addon">$</span>
-        <input type="text" placeholder="Recompensa inicial" class="form-control"/><span class="input-group-addon">.00</span>
+        <input type="number" placeholder="Recompensa inicial" ng-model="proposalData.quantity" class="form-control"/><span class="input-group-addon">.00</span>
       </div><br/><br/>
       <h6>Sube una imagen</h6>
       <input type="file" position="relative"/>
-      <p>{{ test }}</p><br/>
+      <p></p><br/>
       <h6>Mapa del acontecimiento</h6>
       <google-map center="map.center" zoom="map.zoom"></google-map>
     </div>
@@ -22,9 +22,10 @@
   <div class="col-md-3 col-md-offset-1">
     <h6>0</h6>
     <body>interesados</body>
-    <h6>$0</h6>
+    <h6>$ {{ proposalData.quantity }}</h6>
     <body>acumulado</body>
     <h6>20</h6>
     <body>dias restantes</body>
+    <button type="button" ng-click="addNewProposal()" class="btn btn-primary">Apoyar</button>
   </div>
 </div>

@@ -1,11 +1,11 @@
 
-<form onsubmit="return login()" class="form">
+<form class="form">
   <h2 class="form-heading">Iniciar sesi&oacute;n en Movimus</h2>
   <div class="form-fields">
-    <input id="username" type="text" placeholder="Email" required="" autofocus="" class="form-control"/>
-    <input id="password" type="password" placeholder="Password" required="" class="form-control"/>
+    <input id="username" type="text" placeholder="Email" required="" autofocus="" ng-model="userData.username" class="form-control"/>
+    <input id="password" type="password" placeholder="Password" required="" ng-model="userData.password" class="form-control"/>
   </div>
-  <button type="submit" class="btn btn-lg btn-primary btn-block">Iniciar sesi&oacute;n</button>
+  <button ng-click="login()" class="btn btn-lg btn-primary btn-block">Iniciar sesi&oacute;n</button>
   <p style="margin-top:10px;" class="text-center">o <a ui-sref="sign-up" class="text">Reg&iacute;strate</a></p>
   <p style="margin-top:10px;" class="text-center"><a ui-sref="h.home" class="text">Inicio</a></p>
 </form>

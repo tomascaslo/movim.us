@@ -42,5 +42,20 @@ angular.module('movimusApp')
   			// var url = 'users/' + userId + '/';
   			// $http.get(url);
   		},
+      login: function(userData){
+        console.log("HEY!")
+        return Parse.User.logIn(userData.username, userData.password, {
+          success: function(user){
+            console.log(user);
+            localStorageService.set('loggedin', true);
+            $state.go('h.home');
+          },
+          error: function(user, error){
+            localStorageService.set('loggedin', false);
+            $state.go('h.home');
+            alert("Error: " + error.code + " " + error.message);
+          }
+        });
+      }
   	}
   }]);
