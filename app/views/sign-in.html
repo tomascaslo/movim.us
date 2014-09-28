@@ -8,7 +8,8 @@
   <button type="submit" class="btn btn-lg btn-primary btn-block">Iniciar sesi&oacute;n</button>
   <p style="margin-top:10px;" class="text-center">o <a ui-sref="sign-up" class="text">Reg&iacute;strate</a></p>
   <p style="margin-top:10px;" class="text-center"><a ui-sref="h.home" class="text">Inicio</a></p>
-</form><span id="paypalContainer"></span>
+</form>
+<div class="row"><span id="paypalContainer"></span></div>
 <script>
   paypal.use( ["login"], function(login) {
    login.render ({
@@ -17,7 +18,7 @@
     "scopes": "profile email address phone https://uri.paypal.com/services/paypalattributes",
     "containerid": "paypalContainer",
     "locale": "en-us",
-    "returnurl": "http://localhost:9000/#/home"
+    "returnurl": "https://movimus.firebaseapp.com/#/home"
    });
   });
 </script>

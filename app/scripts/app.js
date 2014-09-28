@@ -64,7 +64,8 @@ angular
 				url: '/sign-up',
 				views: {
 					'generalView' : {
-						templateUrl: 'views/sign-up.html'
+						templateUrl: 'views/sign-up.html',
+						controller: 'SignUpCtrl'
 					},
 				}
 			})

@@ -11,8 +11,8 @@ form.form(onsubmit='return login()')
 		a(ui-sref='sign-up', class="text") Reg&iacute;strate
 	p.text-center(style='margin-top:10px;')
 		a(ui-sref='h.home', class="text") Inicio
-
-span(id="paypalContainer")
+div(class="row")
+	span(id="paypalContainer")
 script.
 	paypal.use( ["login"], function(login) {
 		login.render ({
@@ -21,6 +21,6 @@ script.
 			"scopes": "profile email address phone https://uri.paypal.com/services/paypalattributes",
 			"containerid": "paypalContainer",
 			"locale": "en-us",
-			"returnurl": "http://localhost:9000/#/home"
+			"returnurl": "https://movimus.firebaseapp.com/#/home"
 		});
 	});
