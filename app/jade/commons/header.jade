@@ -9,9 +9,8 @@ div(class="navbar navbar-default navbar-fixed-top")
         div(class="navbar-collapse collapse")
             ul(class="nav navbar-nav pull-right") 
                 li(class="active")
-                    a(ui-sref="h.home") Inicio
-                li(class="active")
-                    a(ui-sref="login") Iniciar Sesión
+                    a(ui-sref="h.home")
+                        span(class="fui-home")
                 li
                     a(ui-sref="h.new-proposal") 
                         span(class="fui-plus")
@@ -21,5 +20,7 @@ div(class="navbar navbar-default navbar-fixed-top")
                 li
                     a(href="https://www.paypal.com")
                         span(class= "fui-paypal")
+                li(class="active")
+                    a(ui-sref="login") Iniciar Sesión
 
 div(ui-view="bodyView")
