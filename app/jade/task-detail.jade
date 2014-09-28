@@ -1,11 +1,11 @@
 div(class="row")
-	div(class="col-md-10")
+	div(class="col-md-7")
 		div
 			img(src='images/bache.jpeg', alt='..')
 			h1 Quitar bache
 			body Hay un bache cerca de mi casa, ya me tiene hasta la madre, quien me ayuda?
 			p {{ test }}
-			google-map(center="map.center", zoom="map.zoom")
+
 	div(class="col-md-1 col-md-offset-1")
 			h6 4
 			body interesados
@@ -13,4 +13,5 @@ div(class="row")
 			body acumulado
 			h6 10
 			body dias
-			h6 map
+			h6 Lugar:
+			google-map(center="map.center", zoom="map.zoom") 

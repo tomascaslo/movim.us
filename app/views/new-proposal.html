@@ -1,4 +1,30 @@
 
-<div><b>HELLO new!</b>
-  <p>paragraph</p>
+<div class="row">
+  <div class="col-md-7">
+    <div>
+      <h3>Nueva Propuesta</h3><br/>
+      <h6>Sube una imagen</h6>
+      <input type="file" position="relative"/><br/><br/>
+      <div class="input-group">
+        <input type="text" placeholder="Titulo" class="form-control"/>
+      </div><br/>
+      <div class="input-group">
+        <textarea type="form-control" rows="3" placeholder="Descripción" position="relative"></textarea>
+      </div><br/>
+      <div class="input-group"><span class="input-group-addon">$</span>
+        <input type="text" placeholder="Recompensa inicial" class="form-control"/><span class="input-group-addon">.00</span>
+      </div>
+      <p>{{ test }}</p>
+    </div>
+  </div>
+  <div class="col-md-1 col-md-offset-1">
+    <h6>0</h6>
+    <body>interesados</body>
+    <h6>$0</h6>
+    <body>acumulado</body>
+    <h6>20</h6>
+    <body>dias</body>
+    <h6>Agrega el lugar:</h6>
+    <google-map center="map.center" zoom="map.zoom"></google-map>
+  </div>
 </div>
