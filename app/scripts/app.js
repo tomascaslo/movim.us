@@ -15,7 +15,8 @@ angular
 		'ngAnimate',
 		'ngCookies',
 		'ngSanitize',
-		'ngTouch'
+		'ngTouch',
+		'google-maps'
 	])
 	.run(['$rootScope', '$state', '$stateParams', 'localStorageService', 
 		function ($rootScope, $state, $stateParams, localStorageService) {
@@ -61,6 +62,15 @@ angular
 				views: {
 					'bodyView': {
 						templateUrl: 'views/body.html'
+					}
+				}
+			})
+			.state('h.task-detail',{
+				url: '/task_detail',
+				views: {
+					'bodyView': {
+						templateUrl: 'views/task-detail.html',
+						controller: 'TaskDetailCtrl'
 					}
 				}
 			})
