@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name foodtruckieApp
+ * @name movimusApp
  * @description
- * # foodtruckieApp
+ * # movimusApp
  *
  * Main module of the application.
  */
 angular
-	.module('foodtruckieApp', [
+	.module('movimusApp', [
 		'LocalStorageModule',
 		'ui.router',
 		'ngAnimate',
@@ -60,7 +60,7 @@ angular
 				url: '/home',
 				views: {
 					'bodyView': {
-						templateUrl: 'views/body.html'
+						templateUrl: 'views/home.html',
 					}
 				}
 			})

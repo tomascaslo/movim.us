@@ -1,0 +1,24 @@
+div(class="panel panel-primary")
+	div(class="panel-heading")
+		h3(class="panel-title") Panel
+	div(class="panel-body") 
+		div(class="row")
+			div(class="col-md-3")
+				a(href="#", class="thumbnail")
+					img(src="../images/yeoman.png", alt="...")
+			div(class="col-md-6 desc text-justify")
+				p {{ desc }}
+			div(class="col-md-3")
+				div(class="row")
+					div(class="col-md-12 text-center")
+						h3 $50.00
+				div(class="row")
+					div(class="col-md-12 text-center") 
+						h6 3423 personas
+				div(class="row")
+					div(class="col-md-1 col-md-offset-3")
+						a(ui-sref="h.new-proposal") 
+							span(class="fui-triangle-up text-primary")
+					div(class="col-md-1") 
+						a(ui-sref="h.new-proposal") 
+							span(class="fui-paypal text-primary")
