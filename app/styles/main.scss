@@ -89,4 +89,27 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+  .displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+    }
+  .resize{
+    width:250px;
+    height: auto;
+  }
+  .resize-thumb{
+    width:60px;
+    height: auto;
+  }
+  .profile{
+  padding-top: 20px;
+  paddong-bottom: 20px;
+  }
+  hr {
+    border: none;
+    height: 1px;
+    color: #333;
+    background-color: #333;
+  }
 }

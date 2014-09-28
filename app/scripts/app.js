@@ -72,7 +72,7 @@ angular
 					}
 				}
 			})
-			.state('profile',{
+			.state('h.profile',{
 				url: '/profile',
 				views: {
 					'header' : {
