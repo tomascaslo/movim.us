@@ -48,23 +48,25 @@ angular
 		// $locationProvider.hashPrefix('');
 
 		$stateProvider
-			.state('home',{
-				url: '/home',
+			.state('h',{
+				abstract: true,
 				views: {
 					'header' : {
 						templateUrl: 'views/commons/header.html'
 					},
+				}
+			})
+			.state('h.home',{
+				url: '/home',
+				views: {
 					'bodyView': {
 						templateUrl: 'views/body.html'
 					}
 				}
 			})
-			.state('new-proposal',{
+			.state('h.new-proposal',{
 				url: '/new_proposal',
 				views: {
-					'header' : {
-						templateUrl: 'views/commons/header.html'
-					},
 					'bodyView': {
 						templateUrl: 'views/new-proposal.html'
 					}
