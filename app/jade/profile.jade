@@ -8,8 +8,8 @@ div(class="container")
 			h4(class="pull-right") {{ user.score }}%
 		div(class="col-md-6")
 			img(src="images/thumbs-up.jpg" class="pull-left img-responsive displayed resize-thumb")
-	hr
-	div(class="col-md-4 bold")
+	div(class="col-md-2 bold")
 		p Recent
+	hr
 	div(ng-repeat="task in tasks")
 		task-element-directive
