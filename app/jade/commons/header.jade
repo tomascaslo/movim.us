@@ -9,10 +9,12 @@ div(class="navbar navbar-default navbar-fixed-top")
         div(class="navbar-collapse collapse")
             ul(class="nav navbar-nav pull-right") 
                 li(class="active")
-                    a(ui-sref="home") Home
+                    a(ui-sref="h.home") Home
                 li
-                    a(ui-sref="new-proposal") 
+                    a(ui-sref="h.new-proposal") 
                         span(class="fui-plus")
                 li
                     a(ui-sref="profile") 
                         span(class="fui-user")
+
+div(ui-view="bodyView")
