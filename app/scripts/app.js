@@ -81,6 +81,17 @@ angular
 						templateUrl: 'views/new-proposal.html'
 					}
 				}
+			})
+			.state('profile',{
+				url: '/profile',
+				views: {
+					'header' : {
+						templateUrl: 'views/commons/header.html'
+					},
+					'bodyView': {
+						templateUrl: 'views/profile.html'
+					}
+				}
 			});
 
 	}]);
