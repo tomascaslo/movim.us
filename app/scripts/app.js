@@ -78,7 +78,8 @@ angular
 				url: '/new_proposal',
 				views: {
 					'bodyView': {
-						templateUrl: 'views/new-proposal.html'
+						templateUrl: 'views/new-proposal.html',
+						controller: 'NewProposalCtrl'
 					}
 				}
 			})

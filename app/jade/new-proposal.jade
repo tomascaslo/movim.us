@@ -3,21 +3,22 @@ div(class="row")
 		div
 			h3 Nueva Propuesta
 			br
-			h6 Sube una imagen
-			input(type='file', position='relative')
-			br
-			br
 			div(class="input-group")
 				input(type="text" class="form-control" placeholder="Titulo")
 			br
 			div(class="input-group")
 				textarea(type="form-control" rows="3" placeholder="Descripción", position="relative")
 			br
+			h6 Sube una imagen
+			input(type='file', position='relative')
+			br
 			div(class="input-group")
 				span(class="input-group-addon") $
 				input(type="text" class="form-control" placeholder="Recompensa inicial")
 				span(class="input-group-addon") .00
 			p {{ test }}
+			b Lugar exacto del acontecimiento:
+			google-map(center="map.center", zoom="map.zoom")
 
 	div(class="col-md-1 col-md-offset-1")
 			h6 0
@@ -26,7 +27,5 @@ div(class="row")
 			body acumulado
 			h6 20
 			body dias
-			h6 Agrega el lugar:
-			google-map(center="map.center", zoom="map.zoom") 
 
 
