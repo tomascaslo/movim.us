@@ -15,7 +15,8 @@
     "angular-mocks": "~1.2.0",
     "angular-scenario": "~1.2.0",
     "angular-local-storage": "~0.0.7",
-    "angular-ui-router": "~0.2.11"
+    "angular-ui-router": "~0.2.11",
+    "angular-google-maps": "~1.2.2"
   },
   "appPath": "app"
 }

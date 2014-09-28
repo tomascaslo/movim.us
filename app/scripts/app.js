@@ -15,7 +15,8 @@ angular
 		'ngAnimate',
 		'ngCookies',
 		'ngSanitize',
-		'ngTouch'
+		'ngTouch',
+		'google-maps'
 	])
 	.run(['$rootScope', '$state', '$stateParams', 'localStorageService', 
 		function ($rootScope, $state, $stateParams, localStorageService) {
@@ -64,11 +65,31 @@ angular
 					}
 				}
 			})
+			.state('h.task-detail',{
+				url: '/task_detail',
+				views: {
+					'bodyView': {
+						templateUrl: 'views/task-detail.html',
+						controller: 'TaskDetailCtrl'
+					}
+				}
+			})
 			.state('h.new-proposal',{
 				url: '/new_proposal',
 				views: {
 					'bodyView': {
 						templateUrl: 'views/new-proposal.html'
+					}
+				}
+			})
+			.state('h.profile',{
+				url: '/profile',
+				views: {
+					'header' : {
+						templateUrl: 'views/commons/header.html'
+					},
+					'bodyView': {
+						templateUrl: 'views/profile.html'
 					}
 				}
 			});
