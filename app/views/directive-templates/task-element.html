@@ -1,7 +1,9 @@
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title">{{ task.name }}</h3>
+    <div ng-click="openDetail(task.taskID)">
+      <h3 class="panel-title">{{ task.name }}</h3>
+    </div>
   </div>
   <div class="panel-body">
     <div class="row">

@@ -1,17 +1,16 @@
 div(class="row")
 	div(class="col-md-7")
 		div
-			h3 Quitar bache
-			img(src='images/bache.jpeg', alt='..')
-			br
-			br
-			body Hay un bache cerca de mi casa, ya me tiene hasta la madre, quien me ayuda?
+
+			img(ng-src="{{ task.image }}", alt='..')
+			h1 {{ task.name }}
+			body {{ task.description }}
 			p {{ test }}
 			h5 Lugar
 			google-map(center="map.center", zoom="map.zoom") 
-
 	div(class="col-md-3 col-md-offset-1")
 			h6 4
+			h6 {{  }}
 			body interesados
 			h6 $70
 			body acumulado

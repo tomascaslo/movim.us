@@ -16,7 +16,7 @@ angular.module('movimusApp')
   				profileImage: 'images/berlanga.jpg',
   				score: 20
   			}
-  			// var url = 'users/' + userId;
+  			// var url = 'users/' + userId + '/';
   			// $http.get(url);
   		},
   	}
