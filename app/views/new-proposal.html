@@ -2,19 +2,20 @@
 <div class="row">
   <div class="col-md-7">
     <div>
-      <h3>Nueva Propuesta</h3><br/>
+      <h3>Nueva Propuesta</h3>
       <div class="input-group">
         <input type="text" placeholder="Titulo" class="form-control"/>
       </div><br/>
       <div class="input-group">
         <textarea type="form-control" rows="3" placeholder="Descripción" position="relative"></textarea>
       </div><br/>
-      <h6>Sube una imagen</h6>
-      <input type="file" position="relative"/><br/>
       <div class="input-group"><span class="input-group-addon">$</span>
         <input type="text" placeholder="Recompensa inicial" class="form-control"/><span class="input-group-addon">.00</span>
-      </div>
-      <p>{{ test }}</p><b>Lugar exacto del acontecimiento:</b>
+      </div><br/><br/>
+      <h6>Sube una imagen</h6>
+      <input type="file" position="relative"/>
+      <p>{{ test }}</p><br/>
+      <h6>Mapa del acontecimiento</h6>
       <google-map center="map.center" zoom="map.zoom"></google-map>
     </div>
   </div>
