@@ -36,6 +36,9 @@ angular
 	}])
 	.config(['$httpProvider', '$stateProvider', '$urlRouterProvider', '$locationProvider',
 		function ($httpProvider, $stateProvider, $urlRouterProvider, $locationProvider) {
+
+		Parse.initialize("JkCdrrNfvFii8J1ZE57vcHTKwIlBdeuqYFRmeT0F", "U0krlGjUbRx1YdcVK23Ruvmp4IBQOrrUEwScVpst");
+
 		// Setting up the xsrf token for gets and petitions
 		$httpProvider.defaults.xsrfCookieName = 'csrftoken';
 		$httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
