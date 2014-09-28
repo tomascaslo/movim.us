@@ -1,20 +1,22 @@
 
 <div class="row">
-  <div class="col-md-10">
-    <div><img src="images/bache.jpeg" alt=".."/>
-      <h1>Quitar bache</h1>
-      <body>Hay un bache cerca de mi casa, ya me tiene hasta la madre, quien me ayuda?</body>
+  <div class="col-md-7">
+    <div><img src="{{task.image}}" alt=".."/>
+      <h1>{{ task.name }}</h1>
+      <body>{{ task.description }}</body>
       <p>{{ test }}</p>
+      <h5>Lugar</h5>
       <google-map center="map.center" zoom="map.zoom"></google-map>
     </div>
   </div>
-  <div class="col-md-1 col-md-offset-1">
+  <div class="col-md-3 col-md-offset-1">
     <h6>4</h6>
+    <h6>{{  }}</h6>
     <body>interesados</body>
     <h6>$70</h6>
     <body>acumulado</body>
     <h6>10</h6>
-    <body>dias</body>
-    <h6>map</h6>
+    <body>dias restantes</body><br/><br/>
+    <button type="button" class="btn-default">Apoyar</button>
   </div>
 </div>

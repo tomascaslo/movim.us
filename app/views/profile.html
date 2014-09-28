@@ -1,16 +1,19 @@
 
-<div class="container"><img src="images/berlanga.jpg" alt="Responsive image" class="img-responsive img-circle displayed resize profile"/>
+<div class="container"><img ng-src="{{ user.profileImage }}" alt="Responsive image" class="img-responsive img-circle displayed resize profile"/>
   <div class="text-center">
-    <h3>Gabriel Berlanga</h3>
+    <h3>{{ user.name }}</h3>
   </div>
-  <div class="row row-centered">
+  <div class="row">
     <div class="col-md-6">
-      <h4>84%</h4>
+      <h4 class="pull-right">{{ user.score }}%</h4>
     </div>
-    <div class="col-md-6"><img src="images/thumbs-up.jpg" class="img-responsive displayed resize-thumb"/></div>
+    <div class="col-md-6"><img src="images/thumbs-up.jpg" class="pull-left img-responsive displayed resize-thumb"/></div>
   </div>
   <hr/>
   <div class="col-md-4 bold">
     <p>Recent</p>
+  </div>
+  <div ng-repeat="task in tasks">
+    <task-element-directive></task-element-directive>
   </div>
 </div>

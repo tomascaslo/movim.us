@@ -3,7 +3,7 @@
 describe('Directive: listElement', function () {
 
   // load the directive's module
-  beforeEach(module('foodtruckieApp'));
+  beforeEach(module('movimusApp'));
 
   var element,
     scope;

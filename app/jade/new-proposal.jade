@@ -1,3 +1,32 @@
-div 
-	b HELLO new!
-	p paragraph
+div(class="row")
+	div(class="col-md-7")
+		div
+			h3 Nueva Propuesta
+			div(class="input-group")
+				input(type="text" class="form-control" placeholder="Titulo")
+			br
+			div(class="input-group")
+				textarea(type="form-control" rows="3" placeholder="Descripción", position="relative")
+			br
+			div(class="input-group")
+				span(class="input-group-addon") $
+				input(type="text" class="form-control" placeholder="Recompensa inicial")
+				span(class="input-group-addon") .00
+			br
+			br
+			h6 Sube una imagen
+			input(type='file', position='relative')
+			p {{ test }}
+			br
+			h6 Mapa del acontecimiento
+			google-map(center="map.center", zoom="map.zoom")
+
+	div(class="col-md-3 col-md-offset-1")
+			h6 0
+			body interesados
+			h6 $0
+			body acumulado
+			h6 20
+			body dias restantes
+
+

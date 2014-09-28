@@ -36,6 +36,9 @@ angular
 	}])
 	.config(['$httpProvider', '$stateProvider', '$urlRouterProvider', '$locationProvider',
 		function ($httpProvider, $stateProvider, $urlRouterProvider, $locationProvider) {
+
+		Parse.initialize("JkCdrrNfvFii8J1ZE57vcHTKwIlBdeuqYFRmeT0F", "U0krlGjUbRx1YdcVK23Ruvmp4IBQOrrUEwScVpst");
+
 		// Setting up the xsrf token for gets and petitions
 		$httpProvider.defaults.xsrfCookieName = 'csrftoken';
 		$httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
@@ -49,6 +52,22 @@ angular
 		// $locationProvider.hashPrefix('');
 
 		$stateProvider
+			.state('login',{
+				url: '/login',
+				views: {
+					'generalView' : {
+						templateUrl: 'views/sign-in.html'
+					},
+				}
+			})
+			.state('sign-up',{
+				url: '/sign-up',
+				views: {
+					'generalView' : {
+						templateUrl: 'views/sign-up.html'
+					},
+				}
+			})
 			.state('h',{
 				abstract: true,
 				views: {
@@ -62,6 +81,7 @@ angular
 				views: {
 					'bodyView': {
 						templateUrl: 'views/home.html',
+						controller: 'TaskListCtrl'
 					}
 				}
 			})
@@ -78,7 +98,8 @@ angular
 				url: '/new_proposal',
 				views: {
 					'bodyView': {
-						templateUrl: 'views/new-proposal.html'
+						templateUrl: 'views/new-proposal.html',
+						controller: 'NewProposalCtrl'
 					}
 				}
 			})
@@ -89,7 +110,8 @@ angular
 						templateUrl: 'views/commons/header.html'
 					},
 					'bodyView': {
-						templateUrl: 'views/profile.html'
+						templateUrl: 'views/profile.html',
+						controller: 'ProfileCtrl'
 					}
 				}
 			});

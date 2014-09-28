@@ -1,23 +1,30 @@
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title">Panel</h3>
+    <div ng-click="openDetail(task.taskID)">
+      <h3 class="panel-title">{{ task.name }}</h3>
+    </div>
   </div>
   <div class="panel-body">
     <div class="row">
-      <div class="col-md-3"><a href="#" class="thumbnail"><img src="../images/yeoman.png" alt="..."/></a></div>
+      <div class="col-md-3"><a ui-sref="h.task-detail" class="thumbnail"><img src="{{task.image}}" alt="..."/></a></div>
       <div class="col-md-6 desc text-justify">
-        <p>{{ desc }}</p>
+        <p>{{ task.description }}</p>
       </div>
       <div class="col-md-3">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h3>$50.00</h3>
+            <div class="row">
+              <div class="col-md-8 text-center">
+                <h4>${{ task.amount_collected | number:2 }} </h4>
+              </div>
+              <div class="col-md-4"><span style="font-size: 12px;">MXN</span></div>
+            </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-            <h6>3423 personas</h6>
+            <h6>{{ task.current_contributors }} personas</h6>
           </div>
         </div>
         <div class="row">
