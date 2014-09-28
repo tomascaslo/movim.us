@@ -1,6 +1,12 @@
 'use strict';
 
-angular.module('foodtruckieApp')
+angular.module('movimusApp')
 	.controller('TaskDetailCtrl', ['$scope', function($scope){
-		$scope.test = 'HOLA MUNDO!';
+		$scope.map = {
+			center: {
+				latitude: 45,
+				longitude: -73
+			},
+			zoom: 8
+		};
 	}]);
