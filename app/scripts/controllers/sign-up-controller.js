@@ -7,7 +7,7 @@
  * # SignUpControllerCtrl
  * Controller of the foodtruckieApp
  */
-angular.module('foodtruckieApp')
+angular.module('movimusApp')
 	.controller('SignUpCtrl', ['$scope', function ($scope) {
-		
+
 	}]);
