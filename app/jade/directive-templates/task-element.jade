@@ -6,7 +6,7 @@ div(class="panel panel-primary")
 		div(class="row")
 			div(class="col-md-3")
 				a(ui-sref="h.task-detail", class="thumbnail")
-					img(src="../images/yeoman.png", alt="...")
+					img(src="{{task.image}}", alt="...")
 			div(class="col-md-6 desc text-justify")
 				p {{ task.description }}
 			div(class="col-md-3")
