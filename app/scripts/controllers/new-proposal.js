@@ -16,6 +16,10 @@ angular.module('movimusApp')
 			quantity: 0
 		};
 
+		$scope.$watch('proposalData', function(newValue){
+			console.log(newValue);
+		});
+
 		$scope.addNewProposal = function (){
 			tasksService.addNewProposal($scope.proposalData).then(function(result){
 				console.log(result);
