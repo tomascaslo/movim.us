@@ -1,20 +1,24 @@
 div(class="panel panel-primary")
 	div(class="panel-heading")
-		h3(class="panel-title") Panel
+		h3(class="panel-title") {{ task.name }}
 	div(class="panel-body") 
 		div(class="row")
 			div(class="col-md-3")
 				a(href="#", class="thumbnail")
 					img(src="../images/yeoman.png", alt="...")
 			div(class="col-md-6 desc text-justify")
-				p {{ desc }}
+				p {{ task.description }}
 			div(class="col-md-3")
 				div(class="row")
 					div(class="col-md-12 text-center")
-						h3 $50.00
+						div(class="row")
+							div(class="col-md-8 text-center")
+								h4 ${{ task.amount_collected | number:2 }} 
+							div(class="col-md-4")
+								span(style="font-size: 12px;") MXN
 				div(class="row")
 					div(class="col-md-12 text-center") 
-						h6 3423 personas
+						h6 {{ task.current_contributors }} personas
 				div(class="row")
 					div(class="col-md-1 col-md-offset-3")
 						a(ui-sref="h.new-proposal") 

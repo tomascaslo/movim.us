@@ -62,6 +62,7 @@ angular
 				views: {
 					'bodyView': {
 						templateUrl: 'views/home.html',
+						controller: 'TaskListCtrl'
 					}
 				}
 			})
@@ -89,7 +90,8 @@ angular
 						templateUrl: 'views/commons/header.html'
 					},
 					'bodyView': {
-						templateUrl: 'views/profile.html'
+						templateUrl: 'views/profile.html',
+						controller: 'ProfileCtrl'
 					}
 				}
 			});
