@@ -1,0 +1,9 @@
+form.form(onsubmit='return login()')
+	h2.form-heading Inicia sesi&oacute;n Movimus
+	.form-fields
+		input#username.form-control(type='text', placeholder='Email', required='', autofocus='')
+		input#password.form-control(type='password', placeholder='Password', required='')
+	button.btn.btn-lg.btn-primary.btn-block(type='submit') Iniciar sesi&oacute;n
+		p.text-center(style='margin-top:10px;')
+		| o
+		a(ui-view='signup') Reg&iacute;strate

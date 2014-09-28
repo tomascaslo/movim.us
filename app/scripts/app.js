@@ -52,6 +52,22 @@ angular
 		// $locationProvider.hashPrefix('');
 
 		$stateProvider
+			.state('login',{
+				url: '/login',
+				views: {
+					'generalView' : {
+						templateUrl: 'views/sign-in.html'
+					},
+				}
+			})
+			.state('sign-up',{
+				url: '/sign-up',
+				views: {
+					'generalView' : {
+						templateUrl: 'views/sign-up.html'
+					},
+				}
+			})
 			.state('h',{
 				abstract: true,
 				views: {
