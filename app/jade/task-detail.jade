@@ -1,13 +1,13 @@
 div(class="row")
 	div(class="col-md-7")
 		div
-			img(src='images/bache.jpeg', alt='..')
-			h1 Quitar bache
-			body Hay un bache cerca de mi casa, ya me tiene hasta la madre, quien me ayuda?
+			img(ng-src="{{ task.image }}", alt='..')
+			h1 {{ task.name }}
+			body {{ task.description }}
 			p {{ test }}
 
 	div(class="col-md-1 col-md-offset-1")
-			h6 4
+			h6 {{  }}
 			body interesados
 			h6 $70
 			body acumulado

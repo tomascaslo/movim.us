@@ -1,6 +1,7 @@
 div(class="panel panel-primary")
 	div(class="panel-heading")
-		h3(class="panel-title") {{ task.name }}
+		div(ng-click="openDetail(task.taskID)")
+			h3(class="panel-title") {{ task.name }}
 	div(class="panel-body") 
 		div(class="row")
 			div(class="col-md-3")

@@ -9,6 +9,10 @@
  */
 angular.module('movimusApp')
 	.controller('TaskListCtrl', ['$scope', 'tasksService', function ($scope, tasksService) {
+		$scope.openDetail = function (id){
+			$state.go('h.task-detail', {taskID: id});
+		};
+
 		function initController(){
 			$scope.tasks = tasksService.getLatestTasks();
 		}
