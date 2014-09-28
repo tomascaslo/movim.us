@@ -6,5 +6,7 @@ form.form(onsubmit='return signup()')
 		input#password.form-control(type='password', placeholder='Contraseña', required)
 	button.btn.btn-lg.btn-primary.btn-block(type='submit') Crear cuenta
 	p.text-center(style='margin-top:10px;')
-		| o
-		a(href='http://codepen.io/userapp/pen/hmnEz') Inicia sesi&oacute;n
+		| o 
+		a(ui-sref='login', class="text") Inicia sesi&oacute;n
+	p.text-center(style='margin-top:10px;')
+		a(ui-sref='h.home', class="text") Inicio
