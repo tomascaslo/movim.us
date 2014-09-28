@@ -24,15 +24,15 @@ angular
 		$rootScope.$state = $state;
 		$rootScope.$stateParams = $stateParams;
 		
-		// $rootScope.$on('$stateChangeStart', function (event, current, previous){
-		// 	var loggedin = !!localStorageService.get('loggedin');
-		// 	console.log('logged in: ' + loggedin);
-		// 	if(current.authenticate && !loggedin){
-		// 		console.log('not authenticated');
-		// 		$state.transitionTo('login');
-		// 		event.preventDefault();
-		// 	}
-		// });
+		$rootScope.$on('$stateChangeStart', function (event, current, previous){
+			var loggedin = !!localStorageService.get('loggedin');
+			console.log('logged in: ' + loggedin);
+			if(current.authenticate && !loggedin){
+				console.log('not authenticated');
+				$state.transitionTo('login');
+				event.preventDefault();
+			}
+		});
 	}])
 	.config(['$httpProvider', '$stateProvider', '$urlRouterProvider', '$locationProvider',
 		function ($httpProvider, $stateProvider, $urlRouterProvider, $locationProvider) {
@@ -97,6 +97,7 @@ angular
 			})
 			.state('h.new-proposal',{
 				url: '/new_proposal',
+				authenticate: true,
 				views: {
 					'bodyView': {
 						templateUrl: 'views/new-proposal.html',

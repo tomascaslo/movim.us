@@ -8,6 +8,17 @@
  * Controller of the foodtruckieApp
  */
 angular.module('movimusApp')
-	.controller('SignUpCtrl', ['$scope', function ($scope) {
+	.controller('SignUpCtrl', ['$scope', 'userService', function ($scope, userService) {
+		$scope.userData = {
+			name: '',
+			email: '', 
+			password: '',
+			passwordConfirmation: ''
+		};
+
+		$scope.signUp = function (){
+			console.log(userService);
+			userService.signUp($scope.userData);
+		};
 
 	}]);

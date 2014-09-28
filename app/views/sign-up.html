@@ -2,11 +2,12 @@
 <form onsubmit="return signup()" class="form">
   <h2 class="form-heading">¡Reg&iacute;strate a Movimus!</h2>
   <div class="form-fields">
-    <input id="name" type="text" placeholder="Nombre" class="form-control"/>
-    <input id="email" type="text" placeholder="Email" required="" class="form-control"/>
-    <input id="password" type="password" placeholder="Contraseña" required="required" class="form-control"/>
+    <input id="name" type="text" placeholder="Usuario" required="required" ng-model="userData.username" class="form-control"/>
+    <input id="email" type="text" placeholder="Email" required="required" ng-model="userData.email" class="form-control"/>
+    <input id="password" type="password" placeholder="Contraseña" required="required" ng-model="userData.password" class="form-control"/>
+    <input id="password" type="password" placeholder="Confirmar contraseña" required="required" ng-model="userData.passwordConfirmation" class="form-control"/>
   </div>
-  <button type="submit" class="btn btn-lg btn-primary btn-block">Crear cuenta</button>
+  <button ng-click="signUp()" class="btn btn-lg btn-primary btn-block button">Crear cuenta</button>
   <p style="margin-top:10px;" class="text-center">o <a ui-sref="login" class="text">Inicia sesi&oacute;n</a></p>
   <p style="margin-top:10px;" class="text-center"><a ui-sref="h.home" class="text">Inicio</a></p>
 </form>

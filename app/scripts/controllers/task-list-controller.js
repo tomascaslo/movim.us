@@ -14,6 +14,7 @@ angular.module('movimusApp')
 		};
 
 		function initController(){
+			console.log(tasksService.getLatestTasks());
 			$scope.tasks = tasksService.getLatestTasks();
 		}
 		initController();
