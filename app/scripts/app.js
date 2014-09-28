@@ -16,7 +16,7 @@ angular
 		'ngCookies',
 		'ngSanitize',
 		'ngTouch',
-		'google-maps'
+		'google-maps',
 	])
 	.run(['$rootScope', '$state', '$stateParams', 'localStorageService', 
 		function ($rootScope, $state, $stateParams, localStorageService) {

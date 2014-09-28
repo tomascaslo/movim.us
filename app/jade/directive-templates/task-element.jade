@@ -6,7 +6,7 @@ div(class="panel panel-primary")
 		div(class="row")
 			div(class="col-md-3")
 				a(ui-sref="h.task-detail", class="thumbnail")
-					img(src="{{task.image}}", alt="...")
+					img(src="{{task.image._url}}", alt="...")
 			div(class="col-md-6 desc text-justify")
 				p {{ task.description }}
 			div(class="col-md-3")
@@ -14,12 +14,12 @@ div(class="panel panel-primary")
 					div(class="col-md-12 text-center")
 						div(class="row")
 							div(class="col-md-8 text-center")
-								h4 ${{ task.amount_collected | number:2 }} 
+								h4 ${{ task.quantity | number:2 }} 
 							div(class="col-md-4")
 								span(style="font-size: 12px;") MXN
 				div(class="row")
 					div(class="col-md-12 text-center") 
-						h6 {{ task.current_contributors }} personas
+						h6 {{ task.contributors }} personas
 				div(class="row")
 					div(class="col-md-1 col-md-offset-3")
 						a(ui-sref="h.new-proposal") 

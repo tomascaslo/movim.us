@@ -3,14 +3,14 @@ div(class="row")
 		div
 			h3 Nueva Propuesta
 			div(class="input-group")
-				input(type="text" class="form-control" placeholder="Titulo")
+				input(type="text", class="form-control", placeholder="Titulo", ng-model="proposalData.name")
 			br
 			div(class="input-group")
-				textarea(type="form-control" rows="3" placeholder="Descripción", position="relative")
+				textarea(type="form-control", rows="3", placeholder="Descripción", ng-model="proposalData.description")
 			br
 			div(class="input-group")
 				span(class="input-group-addon") $
-				input(type="text" class="form-control" placeholder="Recompensa inicial")
+				input(type="number", class="form-control", placeholder="Recompensa inicial", ng-model="proposalData.quantity")
 				span(class="input-group-addon") .00
 			br
 			br
@@ -24,9 +24,11 @@ div(class="row")
 	div(class="col-md-3 col-md-offset-1")
 			h6 0
 			body interesados
-			h6 $0
+			h6 $ {{ proposalData.quantity }}
 			body acumulado
 			h6 20
 			body dias restantes
+			div(class="button")
+				div(ng-click="addNewProposal()")
 
 

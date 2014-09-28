@@ -14,8 +14,22 @@ angular.module('movimusApp')
 		};
 
 		function initController(){
-			console.log(tasksService.getLatestTasks());
-			$scope.tasks = tasksService.getLatestTasks();
+			$scope.tasks = [];
+			tasksService.getLatestTasks().then(function (results){
+				angular.forEach(results, function(item){
+					console.log('hi');
+					$scope.$apply(function() {
+						$scope.tasks.push(item.attributes);
+					});
+					//$scope.tasks.push(item.attributes);
+				});
+			    console.log($scope.tasks);
+			  	// _.each(results, function(task){
+			  	// 	$scope.tasks.push(task.attributes);
+			  	// });
+			}, function (error){
+				alert("Error: " + error.code + " " + error.message);
+			});
 		}
 		initController();
 	}]);
