@@ -47,6 +47,10 @@ angular.module('movimusApp')
   			// return $http.get(url);
   		},
   		getTask: function (id){
+        // var task = Parse.Object.extend("task");
+        // var query = new Parse.Query(task);
+        // query.equalTo("objectId", id);
+        // return '';
   			return {
 					taskID: 1,
 					name: 'Tapar bache',

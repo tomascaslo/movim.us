@@ -7,7 +7,7 @@
   </div>
   <div class="panel-body">
     <div class="row">
-      <div class="col-md-3"><a ui-sref="h.task-detail" class="thumbnail"><img src="{{task.image._url}}" alt="..."/></a></div>
+      <div class="col-md-3"><a ui-sref="h.task-detail({taskId:task.id})" class="thumbnail"><img src="{{task.image._url}}" alt="..."/></a></div>
       <div class="col-md-6 desc text-justify">
         <p>{{ task.description }}</p>
       </div>

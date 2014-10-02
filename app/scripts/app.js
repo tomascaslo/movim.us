@@ -88,7 +88,7 @@ angular
 				}
 			})
 			.state('h.task-detail',{
-				url: '/task_detail',
+				url: '/task_detail/:taskId',
 				views: {
 					'bodyView': {
 						templateUrl: 'views/task-detail.html',

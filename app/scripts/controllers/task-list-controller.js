@@ -19,6 +19,7 @@ angular.module('movimusApp')
 				angular.forEach(results, function(item){
 					console.log('hi');
 					$scope.$apply(function() {
+						item.attributes["id"] = item.id;
 						$scope.tasks.push(item.attributes);
 					});
 					//$scope.tasks.push(item.attributes);
